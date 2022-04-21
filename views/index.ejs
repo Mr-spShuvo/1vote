@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/" class="form" method="post">
+      <% if(typeof status !== "undefined" && status) {%>
+      <h2 style="text-align: center"><%= status %></h2>
+      <%}%>
+      <h1>Choose your favorite color?</h1>
+      <input type="hidden" name="fingerprint" value="" id="fingerprint-input" />
+      <ul>
+        <li>
+          <div class="customCheck">
+            <input type="radio" value="red" name="color" id="red" />
+            <label for="red">Red <span>(<% if(count){ %><%= count.red %><% } %>)</span></label>
+          </div>
+        </li>
+        <li>
+          <div class="customCheck">
+            <input type="radio" value="green" name="color" id="green" />
+            <label for="green">Green <span>(<% if(count){ %><%= count.red %><% } %>)</span></label>
+          </div>
+        </li>
+        <li>
+          <div class="customCheck">
+            <input type="radio" value="blue" name="color" id="blue" />
+            <label for="blue">Blue <span>(<% if(count){ %><%= count.red %><% } %>)</span></label>
+          </div>
+        </li>
+      </ul>
+      <button class="button" type="submit" role="submit">Vote!</button>
+    </form>
+    <!-- FingerPrintJs -->
+    <script src="script.js"></script>
+  </body>
+</html>

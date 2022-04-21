@@ -1,0 +1,108 @@
+body {
+  font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form {
+  color: #444;
+  margin: 4em auto;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #767676;
+  padding-bottom: 25px;
+}
+.form:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.form ul {
+  list-style: none;
+  text-align: left;
+}
+.form li {
+  margin-top: 10px;
+}
+.form button {
+  margin-top: 1em;
+  float: right;
+  padding: 0.5em 1em;
+  font-size: 30px;
+  color: #444;
+  border: 1px solid #767676;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+.customCheck {
+  position: relative;
+  display: inline-block;
+  min-height: 32px;
+  max-height: 32px;
+  line-height: 32px;
+}
+.customCheck input[type='radio'] {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  outline: 0;
+  z-index: -1;
+  width: 32px;
+  height: 32px;
+}
+.customCheck input[type='radio']:checked + label:after {
+  animation: blah 500ms ease;
+  opacity: 1;
+  transform: scale(1);
+}
+.customCheck label {
+  padding-left: 48px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.customCheck label:before {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.2.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23AAAAAA%3B%7D%0A%09.st1%7Bfill%3A%2342B145%3B%7D%0A%3C/style%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M1%2C6c0-2.8%2C2.2-5%2C5-5h12c2.8%2C0%2C5%2C2.2%2C5%2C5v12c0%2C2.8-2.2%2C5-5%2C5H6c-2.8%2C0-5-2.2-5-5V6z%20M2%2C6L2%2C6v12%0A%09c0%2C2.2%2C1.8%2C4%2C4%2C4h12c2.2%2C0%2C4-1.8%2C4-4V6c0-2.2-1.8-4-4-4H6C3.8%2C2%2C2%2C3.8%2C2%2C6z%22/%3E%0A%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  content: ' ';
+  fill: red;
+}
+.customCheck label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  content: ' ';
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  transform: scale(0.5);
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.2.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23AAAAAA%3B%7D%0A%09.st1%7Bfill%3A%2342B145%3B%7D%0A%3C/style%3E%0A%3Cpath%20class%3D%22st1%22%20d%3D%22M16.7%2C8.3c-0.4-0.4-1-0.4-1.4%2C0l-4.9%2C5.2l-1.7-1.8c-0.4-0.4-1-0.4-1.4%2C0s-0.4%2C1%2C0%2C1.4l2.4%2C2.6%0A%09c0.4%2C0.4%2C1.1%2C0.4%2C1.5%2C0l5.6-6C17.1%2C9.3%2C17.1%2C8.6%2C16.7%2C8.3z%22/%3E%0A%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+}
+@keyframes blah {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.checkbox-frame {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.2.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23AAAAAA%3B%7D%0A%09.st1%7Bfill%3A%2342B145%3B%7D%0A%3C/style%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M1%2C6c0-2.8%2C2.2-5%2C5-5h12c2.8%2C0%2C5%2C2.2%2C5%2C5v12c0%2C2.8-2.2%2C5-5%2C5H6c-2.8%2C0-5-2.2-5-5V6z%20M2%2C6L2%2C6v12%0A%09c0%2C2.2%2C1.8%2C4%2C4%2C4h12c2.2%2C0%2C4-1.8%2C4-4V6c0-2.2-1.8-4-4-4H6C3.8%2C2%2C2%2C3.8%2C2%2C6z%22/%3E%0A%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+}
+.checkbox-check {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.2.1%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23AAAAAA%3B%7D%0A%09.st1%7Bfill%3A%2342B145%3B%7D%0A%3C/style%3E%0A%3Cpath%20class%3D%22st1%22%20d%3D%22M16.7%2C8.3c-0.4-0.4-1-0.4-1.4%2C0l-4.9%2C5.2l-1.7-1.8c-0.4-0.4-1-0.4-1.4%2C0s-0.4%2C1%2C0%2C1.4l2.4%2C2.6%0A%09c0.4%2C0.4%2C1.1%2C0.4%2C1.5%2C0l5.6-6C17.1%2C9.3%2C17.1%2C8.6%2C16.7%2C8.3z%22/%3E%0A%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+}
